@@ -1,65 +1,67 @@
-# Agente de cobrança com IA
+# AI Debt-Collection Agent
 
-Agente de cobrança no WhatsApp para quem vende imóvel a prazo. Ele manda o boleto na hora certa, lembra quem atrasou, corrige a parcela pela poupança, lê o relatório do banco para saber quem pagou e junta num resumo diário só o que precisa da cabeça de uma pessoa.
+[![tests](https://github.com/rodrigomedeiros91-source/agente-cobranca-ia/actions/workflows/tests.yml/badge.svg)](https://github.com/rodrigomedeiros91-source/agente-cobranca-ia/actions/workflows/tests.yml)
 
-Criei o projeto para um cliente real, uma empresa que vende imóveis parcelados e cobrava tudo numa planilha, à mão. Esta versão pública troca nomes, telefones, imóveis e a empresa por dados inventados. Os casos reais ficam no repositório privado.
+*[Leia em português](README.pt-BR.md)*
 
-> **English summary:** WhatsApp debt-collection agent built on Claude for a real estate seller with installment contracts. It runs a reminder schedule, recalculates installments with Brazil's savings-rate index (fetched from the Central Bank API), parses the bank's boleto reports to reconcile payments, and condenses everything that needs a human into one daily summary. The model can't give discounts, change due dates or confirm payments: those limits live in the tools, not the prompt. 522 offline test checks.
+A WhatsApp debt-collection agent for companies that sell real estate on installments. It sends each boleto (Brazilian bank slip) at the right time, reminds people who are late, corrects installments by Brazil's savings-rate index, reads the bank's report to find out who paid, and condenses everything that needs a human into one daily summary.
 
-## Como funciona
+I built it for a real client, a company that sold property in installments and ran collections by hand in a spreadsheet. This public version replaces names, phone numbers, properties and the company with made-up data. The real cases stay in a private repository.
+
+## How it works
 
 ```mermaid
 flowchart TB
-    P[Planilha Google<br/>contratos e séries] --> C[calculo.js<br/>correção pela poupança]
-    B[API do Banco Central<br/>série 195] --> I[indices.js] --> C
-    C --> R[regua.js<br/>quem recebe o quê hoje]
-    R -->|boleto, lembrete| W[WhatsApp]
-    W <-->|dúvida, já paguei, 2ª via| A[Agente Claude<br/>4 ferramentas]
-    X[Relatório do banco<br/>em aberto e liquidados] --> L[relatorios.js] --> K[conciliacao.js<br/>banco × planilha]
-    K --> S[resumo.js<br/>um recado por dia]
+    P[Google Sheet<br/>contracts and series] --> C[calculo.js<br/>savings-index correction]
+    B[Central Bank API<br/>series 195] --> I[indices.js] --> C
+    C --> R[regua.js<br/>who gets what today]
+    R -->|boleto, reminder| W[WhatsApp]
+    W <-->|questions, already paid, 2nd copy| A[Claude agent<br/>4 tools]
+    X[Bank report<br/>open and paid] --> L[relatorios.js] --> K[conciliacao.js<br/>bank vs sheet]
+    K --> S[resumo.js<br/>one message a day]
     R --> S
     A --> S
-    S --> O[Operador no WhatsApp]
+    S --> O[Operator on WhatsApp]
 ```
 
-## Decisões que fazem diferença
+## Decisions that matter
 
-| Problema real | Solução |
+| Real problem | Solution |
 | --- | --- |
-| Cobrança é a conversa mais fácil de estragar | Só 4 ferramentas. O agente não calcula, não dá desconto, não muda vencimento e não confirma pagamento |
-| Regra no prompt é sugestão | As travas moram no código: `reenviar_boleto` recusa sozinho um boleto que não vale mais |
-| Cliente diz "já paguei" | `registrar_pagamento_informado` pausa a cobrança até o próximo relatório do banco, sem afirmar que recebeu |
-| "Baixado" no banco parecia pagamento | Não é: o banco baixa o boleto sozinho após 60 dias. A conciliação trata baixa como dívida aberta |
-| Diferença de centavos no arredondamento | A conta reproduz a planilha do cliente centavo por centavo (no projeto privado, conferida contra 17 mil meses reais) |
-| A tarifa do boleto entrava na correção | A tarifa fica fora da base: em 24 meses o erro custaria mais de R$ 130 ao cliente |
-| Operador interrompido o dia todo | Tudo que precisa dele vira um resumo diário, em vez de vinte recados |
-| Planilha mexida por gente | Tudo é lido pelo nome da coluna, nunca pela posição; dado faltando vira alerta, não zero |
-| Transparência e LGPD | Toda conversa começa dizendo que é um assistente automático e de qual empresa |
+| Collections is the easiest conversation to ruin | Only 4 tools. The agent can't calculate, give discounts, change due dates or confirm payments |
+| A rule in the prompt is a suggestion | Guardrails live in code: `reenviar_boleto` refuses on its own a boleto that is no longer valid |
+| Customer says "I already paid" | `registrar_pagamento_informado` pauses collection until the next bank report, without claiming the money arrived |
+| "Written off" in the bank looked like payment | It isn't: the bank writes boletos off after 60 days unpaid. Reconciliation treats it as open debt |
+| Cent differences from rounding | The math reproduces the client's spreadsheet to the cent (in the private project, checked against 17,000 real months) |
+| The bank fee was being compounded | The fee stays out of the base: over 24 months the error would cost the customer more than R$ 130 |
+| Operator interrupted all day | Everything that needs them becomes one daily summary instead of twenty messages |
+| A spreadsheet edited by humans | Columns are read by name, never by position; missing data becomes an alert, not zero |
+| Transparency and LGPD (Brazil's GDPR) | Every conversation starts by saying it's an automated assistant and which company it represents |
 
-A régua, a correção, a leitura dos relatórios e a conciliação são funções puras: entram dados e relógio, sai a lista do que fazer. Por isso os testes cobrem casos como "sábado às 20h01" sem esperar o sábado.
+The schedule, the correction, the report parsing and the reconciliation are pure functions: data and clock in, a list of actions out. That's why the tests cover cases like "Saturday at 8:01 pm" without waiting for Saturday.
 
-## Rodar
+## Run
 
 ```bash
 npm install
-cp .env.example .env   # ANTHROPIC_API_KEY, WhatsApp e Google Sheets
+cp .env.example .env   # ANTHROPIC_API_KEY, WhatsApp and Google Sheets
 npm start
 ```
 
-Testes (sem rede e sem chave de API):
+Tests (no network, no API key):
 
 ```bash
 npm test
 ```
 
-O núcleo de WhatsApp (fila por contato, webhook assinado, áudio, estado cifrado, coexistência com o app do dono) é o mesmo do [agente-whatsapp-ia](https://github.com/rodrigomedeiros91-source/agente-whatsapp-ia).
+The WhatsApp core (per-contact queue, signed webhook, audio, encrypted state, coexistence with the owner's app) is shared with [agente-whatsapp-ia](https://github.com/rodrigomedeiros91-source/agente-whatsapp-ia).
 
 ## Stack
 
-Node.js 18+, Express, Anthropic SDK (Claude com tool use), Google Sheets API, API SGS do Banco Central, WhatsApp Cloud API (Meta) e YCloud, Docker.
+Node.js 18+, Express, Anthropic SDK (Claude tool use), Google Sheets API, Brazilian Central Bank SGS API, WhatsApp Cloud API (Meta) and YCloud, Docker.
 
-## Autor
+## Author
 
-**Rodrigo Medeiros**: consultor de IA e automação, Rio de Janeiro. [LinkedIn](https://www.linkedin.com/in/rodrigo-r-244203161/)
+**Rodrigo Medeiros**, AI & automation consultant, Rio de Janeiro. [LinkedIn](https://www.linkedin.com/in/rodrigo-r-244203161/)
 
-Escrito com desenvolvimento assistido por IA (Claude Code), com levantamento das regras junto ao cliente, testes e decisões de arquitetura meus.
+Written with AI-assisted development (Claude Code); gathering the business rules with the client, the tests and the architecture decisions are mine. Code comments are in Portuguese, the client's language.
