@@ -1,0 +1,61 @@
+Itauacute; Bankline
+
+
+
+
+                                                     Boletos baixados e liquidados
+       Dados da consulta 31/08/2026                                                                      Relatório gerado em: 01/09/2026 às 15:27:44
+
+
+                                                                                                             Nome do EMPRESA EXEMPLO LT
+       Agência/Conta: 0000 / 00000-0                       CNPJ: 00.000.000/0000-00
+                                                                                                           beneficiário: LTDA
+
+                                                        Data de                               Nosso
+                    Pagador            Vencimento                    Valor (R$) Carteira                 Seu número Histórico     Tipo de Cobrança
+                                                    Baixa/Liquidação                          número
+          MARIA DAS GRACAS             30/07/2026       30/07/2026      3.628,98     157     00041662    J703-13/40    Liquidado Cobrança Simples
+
+          JOSE ANTUNES LIMA            06/08/2026       04/08/2026      11.533,94    157     00041680    R602-34/60    Liquidado Cobrança Simples
+
+         CARLA RIBEIRO SA              05/08/2026       05/08/2026      2.876,11     157     00041682    P212-09/24    Liquidado Cobrança Simples
+
+           PEDRO MOTA NUNES            05/08/2026       05/08/2026      3.888,34     157     00041684    A003-05/72    Liquidado Cobrança Simples
+
+        ANA CLARA BORGES               10/08/2026       06/08/2026      5.138,54     157     00041667    D103-59/80    Liquidado Cobrança Simples
+
+         LUIS FELIPE ARAUJO            05/08/2026       07/08/2026      1.985,60     157     00041669    P211-16/38    Liquidado Cobrança Simples
+
+           SONIA MARQUES PINTO         10/08/2026       10/08/2026      4.551,81     157     00041686    C303-35/80    Liquidado Cobrança Simples
+
+          RUI BARBOSA NETO             15/08/2026       11/08/2026      2.564,43     157     00041672     P10-04/30    Liquidado Cobrança Simples
+
+         IVO MENDES   / TEREZ          15/08/2026       13/08/2026      3.690,01     157     00041665    A902-04/72    Liquidado Cobrança Simples
+
+          BRUNO SALES                  20/06/2026       17/08/2026      6.128,57     157     00041616    A801-03/05    Baixado    Cobrança Simples
+
+               HELENA PRA              17/08/2026       17/08/2026      4.150,33     157     00041694    L303-10/25    Liquidado Cobrança Simples
+
+        DIOGO MARTINS                  18/08/2026       17/08/2026      3.623,38     157     00041692    R201-42/70    Liquidado Cobrança Simples
+
+         LUIS FELIPE ARAUJO            24/06/2026       20/08/2026       924,75      157     00041658    P211-10/38    Baixado    Cobrança Simples
+
+         RITA CAMPOS SOUZA             25/08/2026       25/08/2026      1.350,34     157     00041691    B301-18/38    Liquidado Cobrança Simples
+
+         OTAVIO REGO                   22/07/2026       28/08/2026      3.560,29     157     00041676    N501-34/60    Liquidado Cobrança Simples
+
+         OTAVIO REGO                   05/08/2026       28/08/2026      3.612,69     157     00041677    N501-35/60    Liquidado Cobrança Simples
+
+         CARLA RIBEIRO SA              05/07/2026       31/08/2026      2.834,51     157     00041652    P212-08/24    Baixado    Cobrança Simples
+
+          JOSE ANTUNES LIMA            06/09/2026       31/08/2026      11.703,58    157     00041681    R602-35/60    Liquidado Cobrança Simples
+
+
+       Dúvidas, sugestões e reclamações na agência. Se preferir, SAC Itaú 0800 728 0728, todos os dias, 24h, ou Fale Conosco no
+       www.itau.com.br. Se não ficar satisfeito, ligue para a Ouvidoria Corporativa Itaú: 0800 570 0011, dias úteis, das 9 às 18 h. Deficientes
+       auditivos: 0800 722 1722, todos dias, 24h.
+
+
+
+
+01/09/2026, 15:28                                                                                                                                      1/1

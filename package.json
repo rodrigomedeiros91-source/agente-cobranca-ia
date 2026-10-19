@@ -1,0 +1,21 @@
+{
+  "name": "agente-cobranca-ia",
+  "version": "1.0.0",
+  "description": "Agente de cobrança no WhatsApp com Claude: régua de cobrança, correção pela poupança, leitura do relatório do banco e conciliação",
+  "main": "src/server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "test": "node scripts/testar.mjs"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.32.1",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.1",
+    "googleapis": "^144.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

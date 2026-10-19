@@ -1,0 +1,109 @@
+Banco Itaú S/A
+
+
+
+
+        Consulta de boletos em aberto (a vencer e vencidos)                                                11/09/2026 às 15:50:23
+       Dados da conta
+                    Agência/Conta: 0000 / 00000-0                                     Empresa: EMPRESA EXEMPLO LT LTDA
+
+
+       Busca
+        Pagador:                                                             Seu número:
+
+        Carteira:                                                          Nosso número:                                 buscar
+
+       Resultado da busca
+       Listagem total de titulos
+                                                                                        Seu                   Boleto
+                                   Vencimento   Valor (R$)     Carteira    Nosso                 Observação            2ª Via
+              Pagador                                                                  Número                  em                 opção
+                                                                          Número
+                                                                                                              DDA
+        NARA VIEIRA                                                                     A801-
+                                   16/07/2026       6.128,57     157      000416172              VENCIDO       SIM
+        CELSO                                                                           04/05
+        EDUARDA LO                                                                      P103-
+                                   22/07/2026       3.444,17     157      000416743              VENCIDO       SIM
+        FABIO ROCHA                                                                     05/56
+        EDUARDA LO                                                                      P103-
+                                   31/07/2026       3.285,16     157      000416750              VENCIDO       SIM
+        FABIO ROCHA                                                                     07/56
+        GILDA NUNES                                                                      703-
+                                   15/08/2026       2.029,48     157      000416883              VENCIDO       SIM
+        IGOR SA                                                                        01/100
+        GILDA NUNES                                                                     C703-
+                                   15/08/2026   29.934,80        157      000416891              VENCIDO       SIM
+        IGOR SA                                                                         01/02
+        GILDA NUNES                                                                     C703-
+                                   15/08/2026   29.427,43        157      000416909              VENCIDO       SIM
+        IGOR SA                                                                         02/02
+        NARA VIEIRA                                                                     A801-
+                                   16/08/2026       6.128,56     157      000416180              VENCIDO       SIM
+        CELSO                                                                           05/05
+        JULIA ALV
+                                                                                        P212-
+        KATIA N                    05/09/2026       2.918,38     157      000416834              VENCIDO       SIM
+                                                                                        10/24
+        MARIA DAS/ R
+        JOSE ANTUNES LIM                                                                 C303-
+                                   10/09/2026   24.944,46        157      000417022              VENCIDO       SIM
+        CARLA RIBEI                                                                     03/06
+        PEDRO MOTA NUNES                                                                 J703-
+                                   11/09/2026       3.736,45     157      000416966                            NÃO
+        CARLA RIBEI                                                                     15/48
+                                                                                         L303-
+        HELENA PRA                 12/09/2026       4.150,33     157      000416958                            SIM
+                                                                                        11/25
+         ANA CLAR                                                                        P103-
+                                   15/09/2026       3.449,17     157      000417071                            SIM
+        LUIS FELIPE A                                                                   08/56
+         SONIA MARQUES                                                                   P10-
+                                   15/09/2026       2.596,31     157      000417089                            SIM
+        RUI BARB                                                                        05/30
+         IVO MENDE
+                                                                                        R201-
+        TEREZA CUNHA D             18/09/2026       3.676,55     157      000416933                            NÃO
+                                                                                        43/70
+        BRUNO
+         HELENA PRADO COS                                                               B301-
+                                   25/09/2026       1.373,84     157      000416982                            SIM
+        DIOGO MARTINS                                                                   19/38
+         PEDRO MOTA NUNES                                                               J703-
+                                   30/09/2026       3.791,31     157      000416974                            NÃO
+        CARLA RIBEI                                                                     16/48
+         RITA C
+                                                                                        P211-
+        OTAVIO REGO                05/10/2026       1.884,68     157      000417014                            NÃO
+                                                                                        18/38
+        NARA / LIN
+         CELSO PIR
+                                                                                        D103-
+        EDUARDA LOPES              10/10/2026       5.290,60     157      000417048                            SIM
+                                                                                        61/80
+        FABI
+         IVO MENDES   /                                                                  A902-
+                                   15/10/2026       3.782,37     157      000417063                            NÃO
+        GILDA NUNES                                                                     06/72
+         SONIA MARQUES                                                                   P10-
+                                   15/10/2026       2.628,58     157      000417097                            SIM
+        RUI BARB                                                                        06/30
+         HELENA PRADO COS                                                                B301-
+                                   25/10/2026       1.397,66     157      000416990                            SIM
+        DIOGO MARTINS                                                                   20/38
+
+
+
+11/09/2026, 15:51                                                                                                                         1/2
+Banco Itaú S/A
+
+
+        Dúvidas, sugestões e reclamações, se necessário, utilize o SAC Itaú 0800 728 0728, todos os dias, 24h, ou o Fale Conosco
+        (www.itau.com.br). Se desejar a reavaliação da solução apresentada após utilizar esses canais, recorra à Ouvidoria
+        Corporativa Itaú 0800 570 0011, dias úteis, das 9 às 18h, Caixa Postal nº 67.600, CEP 03162-971. Deficientes auditivos ou de
+        fala 0800 722 1722, disponível 24hs todos os dias.
+
+
+
+
+11/09/2026, 15:51                                                                                                                      2/2
